@@ -1,0 +1,48 @@
+:root {
+    --bodyColor: #1b202d;
+    --messageBackgroundColor: #373e4e;
+    --textColor: #ffffff;
+    --backgroundImage: url("./images/darkmode_background.png");
+}
+* {
+    box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    background-color: var(--bodyColor);
+    color: var(--textColor);
+    margin: 0;
+    font-family: Mulish, sans-serif;
+}
+#container {
+    height: 100%;
+    max-height: 100vh;
+}
+
+.screen {
+    display: flex;
+    height: 100%;
+}
+
+.screenLeftSide {
+    border-right: solid 0.5px var(--messageBackgroundColor);
+    width: 30%;
+    min-width: 325px;
+}

@@ -1,0 +1,89 @@
+.topNav {
+    background-color: #1b202d;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.homeOptionsButton {
+    margin-left: auto;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.homeOptions {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #364057;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px 0.3px rgb(0, 0, 0);
+    right: 10px;
+    top: 50px;
+    z-index: 9;
+}
+.homeOptions .optionsButton {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+.optionsButton:hover {
+    background-color: #1b202d;
+    cursor: pointer;
+}
+.newConversationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.appName {
+    margin-left: 10px;
+    font-style: italic;
+}
+.chatDiv {
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+.chatAvatar {
+    margin: 0 15px;
+}
+.chatInfo {
+    flex-grow: 1;
+    max-width: calc(100% - 85px);
+    margin-right: 15px;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex h3 {
+    margin: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.unreadMessageNumber {
+    background-color: var(--messageBackgroundColor);
+    padding: 0 3px;
+    border-radius: 50%;
+}
+hr {
+    border: solid 0.5px var(--messageBackgroundColor);
+}
+
+.homeOptionsOverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+}
+.chatList {
+    overflow-y: scroll;
+}
