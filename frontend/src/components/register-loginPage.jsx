@@ -11,11 +11,9 @@ function Register_login() {
         email: "",
         password: "",
     })
-    const [emailError, setEmailError] = React.useState("Invalid Email")
-    const [passwordError, setPasswordError] = React.useState(
-        "Must contain at least 7 characters"
-    )
-
+    const [emailError, setEmailError] = React.useState(null)
+    const [passwordError, setPasswordError] = React.useState(null)
+    const [hasSubmitted, setHasSubmitted] = React.useState(false)
     function isValidEmail(email) {
         return /\S+@\S+\.\S+/.test(email)
     }
@@ -76,6 +74,7 @@ function Register_login() {
                     variant="contained"
                     onClick={() => {
                         if (!emailError && !passwordError) {
+                            setHasSubmitted(true)
                             register(loginInfo)
                         }
                     }}
@@ -86,6 +85,7 @@ function Register_login() {
                     variant="contained"
                     onClick={() => {
                         if (!emailError && !passwordError) {
+                            setHasSubmitted(true)
                             login(loginInfo)
                         }
                     }}
